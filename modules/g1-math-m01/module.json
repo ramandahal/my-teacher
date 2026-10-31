@@ -1,0 +1,12 @@
+{
+  "moduleId": "G1-MATH-M01",
+  "title": "My Number Playground",
+  "grade": 1,
+  "subject": "mathematics",
+  "standards": [
+    "1.NBT.A.1"
+  ],
+  "version": "1.0.0",
+  "status": "prototype",
+  "alignmentNote": "Foundational activities plus partial Grade 1 counting-to-120 coverage; Georgia alignment pending verification."
+}
