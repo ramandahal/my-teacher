@@ -1,0 +1,85 @@
+/* My Teacher — shared lesson player styles. Mobile-first, no external fonts. */
+*{box-sizing:border-box}
+:root{--ink:#17254d;--muted:#5a6684;--brand:#5b4bd8;--brand-dark:#3f31b5;--navy:#192c67;--bg:#f4f7ff;--card:#fff;--good:#137247;--good-bg:#e3f7ec;--warn:#a3481a;--warn-bg:#fff0e6;--gold:#f5b400;--line:#dce5f8}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.45}
+button,input,select{font:inherit}
+button{border:0;border-radius:14px;padding:12px 16px;font-weight:800;cursor:pointer;min-height:48px;background:#e7edff;color:#203a83}
+button:hover{filter:brightness(.97)}
+button:focus-visible,input:focus-visible{outline:3px solid #e99e00;outline-offset:2px}
+button:disabled{cursor:default}
+.primary{background:var(--brand);color:#fff}
+.ghost{background:transparent;color:#203a83;border:2px solid var(--line)}
+header.mt{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px max(14px,calc((100% - 860px)/2));background:var(--navy);color:#fff}
+header.mt .brand{font-weight:900;letter-spacing:.05em;font-size:15px}
+header.mt .brand small{display:block;font-size:11px;font-weight:500;color:#c9d8ff;letter-spacing:0}
+header.mt .brand a{color:#ffd166;text-decoration:none}
+header.mt button{min-height:40px;padding:8px 12px;background:#2c418a;color:#fff;font-size:14px}
+main.mt{max-width:860px;margin:auto;padding:14px}
+.card{background:var(--card);border-radius:22px;box-shadow:0 10px 35px #1a3c8412;padding:20px;margin-bottom:16px}
+.pill{display:inline-block;font-size:12px;background:#dce8ff;color:#214ca5;padding:6px 12px;border-radius:50px;font-weight:800;letter-spacing:.04em}
+h1{font-size:clamp(26px,6vw,40px);margin:10px 0 6px}
+h2{font-size:clamp(20px,4.5vw,28px);margin:6px 0 10px}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.row.end{justify-content:flex-end}
+.spacer{flex:1}
+/* start screen */
+.start{text-align:center;padding:30px 20px}
+.start .big{font-size:84px;line-height:1}
+.start button{font-size:22px;padding:16px 28px;margin-top:14px}
+/* skill map */
+.skills{display:grid;gap:12px}
+.skill{display:flex;align-items:center;gap:14px;text-align:left;background:#fff;border:2px solid var(--line);border-radius:18px;padding:14px;width:100%;color:var(--ink)}
+.skill .ico{font-size:36px;width:52px;text-align:center}
+.skill b{display:block;font-size:18px}
+.skill small{color:var(--muted);font-weight:600}
+.skill .status{margin-left:auto;font-size:26px}
+.skill.done{border-color:#9fdcb8;background:#f4fcf7}
+.skill.review{border-color:#f5c966;background:#fffaf0}
+.checkbtn{width:100%;font-size:20px;padding:16px;margin-top:6px}
+/* stepper */
+.steps{display:flex;gap:6px;margin:4px 0 12px}
+.steps span{flex:1;height:8px;border-radius:8px;background:#e2e8f7}
+.steps span.on{background:var(--brand)}
+.stepname{font-size:13px;font-weight:800;color:var(--brand-dark);letter-spacing:.06em;text-transform:uppercase}
+/* learn cards */
+.learn{text-align:center;padding:10px 0}
+.learn .emoji{font-size:76px;line-height:1.1}
+.learn p{font-size:clamp(20px,4.6vw,26px);margin:14px auto;max-width:560px}
+/* question */
+.prompt{font-size:clamp(21px,4.8vw,28px);font-weight:800;margin:6px 0 10px}
+.stage{min-height:120px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;background:#f6f9ff;border:2px dashed var(--line);border-radius:18px;padding:14px;margin-bottom:14px}
+.stage .pic{font-size:72px;line-height:1}
+.stage .word{font-size:clamp(44px,12vw,72px);font-weight:900;letter-spacing:.12em;color:var(--navy)}
+.stage .label{font-size:22px;font-weight:800;color:var(--muted)}
+.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.options.letters{grid-template-columns:repeat(auto-fit,minmax(64px,1fr))}
+.opt{background:#fff8e6;border:3px solid #f5d27a;color:var(--ink);min-height:96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border-radius:18px;padding:10px}
+.opt .oe{font-size:48px;line-height:1}
+.opt .ol{font-size:20px;font-weight:800}
+.options.letters .opt{min-height:72px}
+.options.letters .opt .ol{font-size:34px}
+.opt.right{background:var(--good-bg);border-color:#47b97a}
+.opt.wrong{background:#f3f3f3;border-color:#d0d0d0;opacity:.55}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.tools button{flex:1;min-width:130px}
+.feedback{min-height:28px;margin-top:12px;padding:0;border-radius:14px;font-weight:700;font-size:18px}
+.feedback.show{padding:12px 14px}
+.feedback.good{background:var(--good-bg);color:var(--good)}
+.feedback.try{background:var(--warn-bg);color:var(--warn)}
+.feedback.hint{background:#eef1ff;color:#2a3a8c}
+.meter{font-size:14px;color:var(--muted);font-weight:700;margin-top:8px}
+.stars{font-size:26px;letter-spacing:4px}
+/* results */
+.result{text-align:center}
+.result .big{font-size:80px;line-height:1}
+.result ul{text-align:left;display:inline-block;margin:10px 0}
+.note{font-size:14px;line-height:1.6;color:var(--muted)}
+.note label{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--ink)}
+footer.mt{text-align:center;padding:24px;color:#66718b;font-size:13px}
+.pop{animation:pop .35s ease}
+@keyframes pop{0%{transform:scale(.9)}60%{transform:scale(1.06)}100%{transform:scale(1)}}
+[tabindex="-1"]:focus{outline:none}
+@media(max-width:520px){.card{padding:16px}.options{grid-template-columns:repeat(2,1fr)}.options.n3{grid-template-columns:repeat(3,1fr);gap:8px}.options.n3 .opt{min-height:88px;padding:8px 4px}.options.n3 .opt .ol{font-size:18px}.options.letters{grid-template-columns:repeat(5,1fr)}.opt .oe{font-size:42px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}}
